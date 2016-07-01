@@ -165,7 +165,6 @@ int perfexpert_database_get_string(void *var, int count, char **val,
     char **temp = (char **)var;
     if (NULL != val[0]) {
         *temp = (char*) malloc(strlen(val[0] + 1)*sizeof(char));
-//        PERFEXPERT_ALLOC(char, *temp, (strlen(val[0]) + 1));
         strcpy(*temp, val[0]);
     }
     return PERFEXPERT_SUCCESS;
